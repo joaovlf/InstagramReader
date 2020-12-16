@@ -1,3 +1,3 @@
 # InstagramReader
-this app reads,  calculate and saves follower's data, posts and likes from an instagram json and returns this data for a user, the user can save this data if he wants or search for another profile.
+this app rReads, calculates and saves data of followers, posts and likes of an instagram account and returns this data for a user that can save it if necessary.
 this app can be used in http://localhost:8080
