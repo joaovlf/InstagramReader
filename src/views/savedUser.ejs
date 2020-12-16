@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>Usuarios Salvos</title>
+</head>
+<body>
+    
+        <h1>Usuarios Salvos</h1>
+        <div class="container">
+        <div class="user">
+            <%for(user of users){%>
+            <table>
+               
+                <th>
+                    <%=user.user%>
+                </th>
+                    <tr>
+                        <td>
+                            nome: <%=user.nome%> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        seguindo: <%=user.followed%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            seguidores: <%=user.followers%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            posts: <%=user.posts%>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Media de likes: <%=user.likes%>
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            media de comentarios: <%=user.comments%>
+                       </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <form action="/savedUser" method="POST">
+                                <input type="hidden" name="id" value="<%=user._id%>">
+                                <button type="submit">deletar</button>
+                            </form>
+                        </td>                        
+                    </tr>
+                    
+        </table>
+        
+
+            
+                
+            
+            
+        
+        <%}%>
+        
+        
+    </div>
+    
+    
+
+    
+</div>
+<br>
+<a href="/"><button class="back" >voltar</button></a>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="list.css">
+    <title>Dados do Usuario</title>
+</head>
+<body>
+
+    <div class="container">    
+        <%for(dado of dados){%>
+    <form action="/user" method="POST">         
+
+        <img src="<%=dado.img%>" alt="profilepic">
+        <h2><%=dado.user%></h2>
+        <input type="hidden" name="user" value="<%=dado.user%>">
+
+        <div class="information">
+    
+            <p>Nome Social: <%=dado.nome%></p>
+            <input type="hidden" name="nome" value="<%=dado.nome%>">
+                
+            <p>Seguindo: <%=dado.followed%></p>
+            <input type="hidden" name="followed" value="<%=dado.followed%>">
+                            
+            <p>Seguidores: <%=dado.followers%></p>
+            <input type="hidden" name="followers" value="<%=dado.followers%>">
+                
+            <p> Quantidade de posts: <%=dado.posts%></p>
+            <input type="hidden" name="posts" value="<%=dado.posts%>">
+                    
+            <p>Media de likes por post: <%=dado.likes%></p>
+            <input type="hidden" name="likes" value="<%=dado.likes%>">
+                
+            <p>Media de comentarios por post: <%=dado.comments%></p>
+            <input type="hidden" name="comments" value="<%=dado.comments%>">
+            
+            </div>        
+        <br>
+        <div style="display:flex;">
+            <button class="back">
+                <a href="/">voltar</a>
+            </button>  
+            <button type="submit">
+                Salvar
+            </button>
+        </div>
+          
+    </form>
+    <%}%>      
+</div>
+
+</body>
+</html>

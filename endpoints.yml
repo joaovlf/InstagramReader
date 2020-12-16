@@ -1,0 +1,6 @@
+-  request:
+       url: /api/user
+       method: GET
+   response:
+       file: jsons/user.json  
+       

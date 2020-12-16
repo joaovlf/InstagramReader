@@ -1,0 +1,104 @@
+
+:root{
+    --color1:rgba(0, 0, 0, 0.8);
+    --color2:rgba(182, 181, 181, 0.4);
+    --color3:rgb(236, 35, 35);
+    --color4: rgba(236, 35, 35,0.5);
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+}
+
+hmtl body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color1)
+    
+}
+
+.container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80vw;
+    height: 30vh;
+    background-color: var(--color2);
+    border-radius:1.2%;
+
+}
+
+label{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input{
+    
+    height: 3.5vh;
+    width: 90%;
+    max-width: 40vw;
+    border-color:var(--color3)
+}
+
+button{
+
+        color:white;
+        background-color:var(--color4) ;
+        border-radius: 0.7vh;
+        border: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1vh;
+        margin-bottom: 1vh;
+        box-shadow: 5vh,5vh,5vh,5vh;
+        
+    
+        }
+button:focus{
+        border: none;
+        outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color:rgb(236, 35, 35);
+            box-shadow: 2px 2px 0 rgb(192, 28, 28);
+            
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    
+
+@media(max-width:700px){
+
+html{
+    font-size:0.7rem;
+
+    }
+ .container{
+    
+     width: 90vw;
+    height: 35vh;
+   
+    
+ }
+
+ input{
+     
+     min-width:70vw;
+ }   
+}
